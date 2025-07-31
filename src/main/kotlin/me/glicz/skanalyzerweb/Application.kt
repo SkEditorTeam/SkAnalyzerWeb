@@ -7,7 +7,6 @@ import me.glicz.skanalyzer.SkAnalyzer
 import me.glicz.skanalyzerweb.plugins.configureContentNegotiation
 import me.glicz.skanalyzerweb.plugins.configureRateLimit
 import me.glicz.skanalyzerweb.plugins.configureRouting
-import java.io.File
 import java.util.concurrent.Executors
 import java.util.concurrent.ScheduledExecutorService
 
@@ -15,7 +14,6 @@ val scheduler: ScheduledExecutorService = Executors.newSingleThreadScheduledExec
 
 var skAnalyzer: SkAnalyzer = SkAnalyzer.builder()
     .flags(AnalyzerFlag.FORCE_VAULT_HOOK, AnalyzerFlag.FORCE_REGIONS_HOOK)
-    .workingDirectory(File("SkAnalyzer"))
     .build()
 
 fun main(args: Array<String>) {

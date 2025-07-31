@@ -8,7 +8,7 @@ plugins {
 repositories {
     mavenCentral()
     maven("https://repo.papermc.io/repository/maven-public/")
-    maven("https://repo.roxymc.net/snapshots")
+    maven("https://repo.roxymc.net/releases")
 }
 
 dependencies {
@@ -17,10 +17,7 @@ dependencies {
     implementation("io.ktor:ktor-server-rate-limit")
     implementation("io.ktor:ktor-server-content-negotiation")
     implementation("io.ktor:ktor-serialization-gson")
-    implementation("ch.qos.logback:logback-classic:1.4.14")
-    implementation("me.glicz:skanalyzer-api:1.5-SNAPSHOT") {
-        exclude("org.slf4j", "slf4j-simple")
-    }
+    implementation("me.glicz:skanalyzer-api:2.0.0-beta.4")
 }
 
 kotlin {
